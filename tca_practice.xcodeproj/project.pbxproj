@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A6A77722CDCEF5F00281FF9 /* TwoCounters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6A77712CDCEF5F00281FF9 /* TwoCounters.swift */; };
 		8A8097CE2CD9A29300EB7EF9 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8097CD2CD9A29300EB7EF9 /* RootView.swift */; };
 		8A8097D22CDC3C9000EB7EF9 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8097D12CDC3C9000EB7EF9 /* Counter.swift */; };
 		8A91276C2CCD25CC00BAC001 /* tca_practiceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A91276B2CCD25CC00BAC001 /* tca_practiceApp.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A6A77712CDCEF5F00281FF9 /* TwoCounters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoCounters.swift; sourceTree = "<group>"; };
 		8A8097CD2CD9A29300EB7EF9 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		8A8097D12CDC3C9000EB7EF9 /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 		8A9127682CCD25CC00BAC001 /* tca_practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tca_practice.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,6 +60,7 @@
 				8A91276B2CCD25CC00BAC001 /* tca_practiceApp.swift */,
 				8A8097CD2CD9A29300EB7EF9 /* RootView.swift */,
 				8A8097D12CDC3C9000EB7EF9 /* Counter.swift */,
+				8A6A77712CDCEF5F00281FF9 /* TwoCounters.swift */,
 				8A91276F2CCD25CD00BAC001 /* Assets.xcassets */,
 				8A9127712CCD25CD00BAC001 /* Preview Content */,
 			);
@@ -149,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A91276C2CCD25CC00BAC001 /* tca_practiceApp.swift in Sources */,
+				8A6A77722CDCEF5F00281FF9 /* TwoCounters.swift in Sources */,
 				8A8097CE2CD9A29300EB7EF9 /* RootView.swift in Sources */,
 				8A8097D22CDC3C9000EB7EF9 /* Counter.swift in Sources */,
 			);
