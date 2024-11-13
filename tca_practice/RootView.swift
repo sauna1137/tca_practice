@@ -18,6 +18,19 @@ struct RootView: View {
                 CounterDemoView(store: store)
               }
             }
+
+            NavigationLink("Two Counters") {
+              Demo(store: Store(initialState: TwoCounters.State()) { TwoCounters() }) { store in
+                TwoCountersView(store: store)
+              }
+            }
+
+            NavigationLink("Bindings") {
+              Demo(store: Store(initialState: BindingBasics.State()) { BindingBasics() }) { store in
+                BindingBasicsView(store: store)
+              }
+            }
+
             }
           }
         }
