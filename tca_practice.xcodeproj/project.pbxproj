@@ -61,14 +61,14 @@
 		8A91276A2CCD25CC00BAC001 /* tca_practice */ = {
 			isa = PBXGroup;
 			children = (
-				8A91276B2CCD25CC00BAC001 /* tca_practiceApp.swift */,
-				8A8097CD2CD9A29300EB7EF9 /* RootView.swift */,
-				8A8097D12CDC3C9000EB7EF9 /* Counter.swift */,
-				8A5C41F32CE17D3A0055EBB5 /* Bindings-Basic.swift */,
-				8A6A77712CDCEF5F00281FF9 /* TwoCounters.swift */,
-				8A91276F2CCD25CD00BAC001 /* Assets.xcassets */,
 				8A9127712CCD25CD00BAC001 /* Preview Content */,
+				8A91276F2CCD25CD00BAC001 /* Assets.xcassets */,
+				8A8097CD2CD9A29300EB7EF9 /* RootView.swift */,
+				8A5C41F32CE17D3A0055EBB5 /* Bindings-Basic.swift */,
 				8A3CACD52CE642D50079C586 /* BindingsForm.swift */,
+				8A8097D12CDC3C9000EB7EF9 /* Counter.swift */,
+				8A91276B2CCD25CC00BAC001 /* tca_practiceApp.swift */,
+				8A6A77712CDCEF5F00281FF9 /* TwoCounters.swift */,
 			);
 			path = tca_practice;
 			sourceTree = "<group>";
