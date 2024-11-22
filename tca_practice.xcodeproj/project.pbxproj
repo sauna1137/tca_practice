@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8A3CACD62CE642D50079C586 /* BindingsForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3CACD52CE642D50079C586 /* BindingsForm.swift */; };
+		8A4298C62CEE454800760FE6 /* OptionalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4298C52CEE454400760FE6 /* OptionalState.swift */; };
 		8A5C41F42CE17D3A0055EBB5 /* Bindings-Basic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5C41F32CE17D3A0055EBB5 /* Bindings-Basic.swift */; };
 		8A6A77722CDCEF5F00281FF9 /* TwoCounters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6A77712CDCEF5F00281FF9 /* TwoCounters.swift */; };
 		8A8097CE2CD9A29300EB7EF9 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8097CD2CD9A29300EB7EF9 /* RootView.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		8A3CACD52CE642D50079C586 /* BindingsForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingsForm.swift; sourceTree = "<group>"; };
+		8A4298C52CEE454400760FE6 /* OptionalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalState.swift; sourceTree = "<group>"; };
 		8A5C41F32CE17D3A0055EBB5 /* Bindings-Basic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bindings-Basic.swift"; sourceTree = "<group>"; };
 		8A6A77712CDCEF5F00281FF9 /* TwoCounters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoCounters.swift; sourceTree = "<group>"; };
 		8A8097CD2CD9A29300EB7EF9 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				8A8097D12CDC3C9000EB7EF9 /* Counter.swift */,
 				8A91276B2CCD25CC00BAC001 /* tca_practiceApp.swift */,
 				8A6A77712CDCEF5F00281FF9 /* TwoCounters.swift */,
+				8A4298C52CEE454400760FE6 /* OptionalState.swift */,
 			);
 			path = tca_practice;
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 			files = (
 				8A91276C2CCD25CC00BAC001 /* tca_practiceApp.swift in Sources */,
 				8A6A77722CDCEF5F00281FF9 /* TwoCounters.swift in Sources */,
+				8A4298C62CEE454800760FE6 /* OptionalState.swift in Sources */,
 				8A5C41F42CE17D3A0055EBB5 /* Bindings-Basic.swift in Sources */,
 				8A8097CE2CD9A29300EB7EF9 /* RootView.swift in Sources */,
 				8A8097D22CDC3C9000EB7EF9 /* Counter.swift in Sources */,

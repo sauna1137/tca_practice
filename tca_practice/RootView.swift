@@ -18,26 +18,32 @@ struct RootView: View {
               CounterDemoView(store: store)
             }
           }
-          
+
           NavigationLink("Two Counters") {
             Demo(store: Store(initialState: TwoCounters.State()) { TwoCounters() }) { store in
               TwoCountersView(store: store)
             }
           }
-          
+
           NavigationLink("Bindings") {
             Demo(store: Store(initialState: BindingBasics.State()) { BindingBasics() }) { store in
               BindingBasicsView(store: store)
             }
           }
-          
+
           NavigationLink("Bindings Form") {
             Demo(store: Store(initialState: BindingForm.State()) { BindingForm() }) { store in
               BindingsForm(store: store)
             }
-            
-            
           }
+
+          NavigationLink("Optional state") {
+            Demo(store: Store(initialState: OptionalBasics.State()) { OptionalBasics() }) { store in
+              OptionalBasicsView(store: store)
+            }
+          }
+
+          
         }
       }
     }
