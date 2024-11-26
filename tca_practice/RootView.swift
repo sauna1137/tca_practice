@@ -43,7 +43,26 @@ struct RootView: View {
             }
           }
 
-          
+          NavigationLink("Multiple destinations") {
+            Demo(
+              store: Store(initialState: MultipleDestinations.State()) { MultipleDestinations() }
+            ) { store in
+              MultipleDestinationsView(store: store)
+            }
+          }
+
+          NavigationLink("Alerts and Confirmation Dialogs") {
+            Demo(
+              store: Store(initialState: AlertAndConfirmationDialog.State()) {
+                AlertAndConfirmationDialog()
+              }
+            ) { store in
+              AlertAndConfirmationDialogView(store: store)
+            }
+          }
+
+
+
         }
       }
     }
