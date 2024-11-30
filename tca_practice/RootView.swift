@@ -61,9 +61,32 @@ struct RootView: View {
             }
           }
 
+          NavigationLink("Focus State") {
+            Demo(store: Store(initialState: FocusStateDemo.State()) { FocusStateDemo() }) { store in
+              FocusStateView(store: store)
+            }
+          }
+
+          NavigationLink("Animations") {
+            Demo(store: Store(initialState: Animations.State()) { Animations() }) { store in
+              AnimationsView(store: store)
+            }
+          }
+        }
+
+        Section {
+
+//          NavigationLink("In memory") {
+//            Demo(
+//              store: Store(initialState: SharedStateInMemory.State()) { SharedStateInMemory() }
+//            ) { store in
+//              SharedStateInMemoryView(store: store)
+//            }
+//          }
 
 
         }
+
       }
     }
   }
