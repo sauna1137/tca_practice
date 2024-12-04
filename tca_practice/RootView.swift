@@ -76,13 +76,23 @@ struct RootView: View {
 
         Section {
 
-//          NavigationLink("In memory") {
-//            Demo(
-//              store: Store(initialState: SharedStateInMemory.State()) { SharedStateInMemory() }
-//            ) { store in
-//              SharedStateInMemoryView(store: store)
-//            }
-//          }
+          NavigationLink("In memory") {
+            Demo(
+              store: Store(initialState: SharedStateInMemory.State()) { SharedStateInMemory() }
+            ) { store in
+              SharedStateInMemoryView(store: store)
+            }
+          }
+
+          NavigationLink("User defaults") {
+            Demo(
+              store: Store(initialState: SharedStateUserDefaults.State()) {
+                SharedStateUserDefaults()
+              }
+            ) { store in
+              SharedStateUserDefaultsView(store: store)
+            }
+          }
 
 
         }

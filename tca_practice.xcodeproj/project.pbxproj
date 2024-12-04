@@ -13,6 +13,7 @@
 		8A5C41F42CE17D3A0055EBB5 /* Bindings-Basic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5C41F32CE17D3A0055EBB5 /* Bindings-Basic.swift */; };
 		8A6A77722CDCEF5F00281FF9 /* TwoCounters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6A77712CDCEF5F00281FF9 /* TwoCounters.swift */; };
 		8A7ECD872CFB4FB90083B940 /* SharedStateInMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7ECD862CFB4FB90083B940 /* SharedStateInMemory.swift */; };
+		8A7ECD892CFE0D040083B940 /* SharedStateUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7ECD882CFE0CF30083B940 /* SharedStateUserDefaults.swift */; };
 		8A8097CE2CD9A29300EB7EF9 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8097CD2CD9A29300EB7EF9 /* RootView.swift */; };
 		8A8097D22CDC3C9000EB7EF9 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8097D12CDC3C9000EB7EF9 /* Counter.swift */; };
 		8A91276C2CCD25CC00BAC001 /* tca_practiceApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A91276B2CCD25CC00BAC001 /* tca_practiceApp.swift */; };
@@ -31,6 +32,7 @@
 		8A5C41F32CE17D3A0055EBB5 /* Bindings-Basic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bindings-Basic.swift"; sourceTree = "<group>"; };
 		8A6A77712CDCEF5F00281FF9 /* TwoCounters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoCounters.swift; sourceTree = "<group>"; };
 		8A7ECD862CFB4FB90083B940 /* SharedStateInMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedStateInMemory.swift; sourceTree = "<group>"; };
+		8A7ECD882CFE0CF30083B940 /* SharedStateUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedStateUserDefaults.swift; sourceTree = "<group>"; };
 		8A8097CD2CD9A29300EB7EF9 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		8A8097D12CDC3C9000EB7EF9 /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 		8A9127682CCD25CC00BAC001 /* tca_practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tca_practice.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +76,7 @@
 		8A7ECD852CFB4F9E0083B940 /* Section2 */ = {
 			isa = PBXGroup;
 			children = (
+				8A7ECD882CFE0CF30083B940 /* SharedStateUserDefaults.swift */,
 				8A7ECD862CFB4FB90083B940 /* SharedStateInMemory.swift */,
 			);
 			path = Section2;
@@ -201,6 +204,7 @@
 				8A8097CE2CD9A29300EB7EF9 /* RootView.swift in Sources */,
 				8A8097D22CDC3C9000EB7EF9 /* Counter.swift in Sources */,
 				8AF5AC5C2CF613E400977EF9 /* AlertAndConfirmationDialog.swift in Sources */,
+				8A7ECD892CFE0D040083B940 /* SharedStateUserDefaults.swift in Sources */,
 				8AF5AC5E2CF693E000977EF9 /* FocusState.swift in Sources */,
 				8A3CACD62CE642D50079C586 /* BindingsForm.swift in Sources */,
 			);
