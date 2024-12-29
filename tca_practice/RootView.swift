@@ -94,6 +94,26 @@ struct RootView: View {
             }
           }
 
+          NavigationLink("Notification") {
+            Demo(
+              store: Store(initialState: SharedStateNotifications.State()) {
+                SharedStateNotifications()
+              }
+            ) { store in
+              SharedStateNotificationsView(store: store)
+            }
+          }
+
+//          NavigationLink("File storage") {
+//            Demo(
+//              store: Store(initialState: SharedStateFileStorage.State()) {
+//                SharedStateFileStorage()
+//              }
+//            ) { store in
+//              SharedStateFileStorageView(store: store)
+//            }
+//          }
+
 
         }
 

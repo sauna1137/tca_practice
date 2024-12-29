@@ -196,7 +196,7 @@ private struct ProfileTabView: View {
   )
 }
 
-struct Stats: Codable, Equatable {
+public struct Stats: Codable, Equatable {
   private(set) var count = 0
   private(set) var maxCount = 0
   private(set) var minCount = 0
