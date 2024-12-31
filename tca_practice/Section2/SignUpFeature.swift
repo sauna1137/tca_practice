@@ -189,6 +189,89 @@ private struct PersonalInfoStep: View {
 }
 
 @Reducer
+private struct TopicsFeature {
+  @ObservableState
+  struct State {
+    @Presents var alert: AlertState<Never>?
+    var isEditingFromSummary = false
+    @Shared var topics: Set<SignUpData.Topic>
+  }
+  enum Action: BindableAction {
+    case alert(PresentationAction<Never>)
+    case binding(BindingAction<State>)
+    case delegate(Delegate)
+    case doneButtonTapped
+    case nextButtonTapped
+    enum Delegate {
+      case stepFinished
+    }
+  }
+  @Dependency(\.dismiss) var dismiss
+  var body: some ReducerOf<Self> {
+    BindingReducer()
+    Reduce { state, action in
+      switch action {
+      case .alert:
+        return .none
+      case .binding:
+        return .none
+      case .delegate:
+        return .none
+      case .doneButtonTapped:
+        if state.topics.isEmpty {
+          state.alert = AlertState {
+            TextState("Please choose at least one topic.")
+          }
+          return .none
+        } else {
+          return .run { _ in await dismiss() }
+        }
+      case .nextButtonTapped:
+        if state.topics.isEmpty {
+          state.alert = AlertState {
+            TextState("Please choose at least one topic.")
+          }
+          return .none
+        } else {
+          return .send(.delegate(.stepFinished))
+        }
+      }
+    }
+    .ifLet(\.alert, action: \.alert)
+  }
+}
+
+private struct TopicsStep: View {
+  @Bindable var store: StoreOf<TopicsFeature>
+
+  var body: some View {
+    Form {
+      Section {
+        ForEach(SignUpData.Topic.allCases) { topic in
+          Toggle(isOn: $store.topics[contains: topic]) {
+            Text(topic.rawValue)
+          }
+        }
+      }
+    }
+    .navigationTitle("Topics")
+    .alert($store.scope(state: \.alert, action: \.alert))
+    .toolbar {
+      ToolbarItem {
+        if store.isEditingFromSummary {
+          Button("Done") {
+            store.send(.doneButtonTapped)
+          }
+        } else {
+          Button("Next") {
+            store.send(.nextButtonTapped)
+          }
+        }
+      }
+    }
+    .interactiveDismissDisabled()
+  }
+}
 
 
 
