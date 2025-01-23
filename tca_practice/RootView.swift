@@ -113,8 +113,16 @@ struct RootView: View {
               SharedStateFileStorageView(store: store)
             }
           }
+        }
 
+        
+        Section {
 
+          NavigationLink("Basics") {
+            Demo(store: Store(initialState: EffectsBasics.State()) { EffectsBasics() }) { store in
+              EffectsBasicsView(store: store)
+            }
+          }
         }
 
       }
