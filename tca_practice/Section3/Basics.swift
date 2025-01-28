@@ -61,7 +61,6 @@ struct EffectsBasics {
         return .none
 
       case .numberFactResponse(.failure(let error)):
-        print("♨️", error ,"♨️")
         state.isNumberFactRequestInFlight = false
         return .none
       }
