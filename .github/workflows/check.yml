@@ -3,8 +3,6 @@ name: Feature Flag Check
 on:
   pull_request:
     types: [opened]
-    paths:
-      - 'RootView.swift'
 
 jobs:
   add_label:
