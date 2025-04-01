@@ -123,6 +123,15 @@ struct RootView: View {
               EffectsBasicsView(store: store)
             }
           }
+
+//          NavigationLink("Cancellation") {
+//            Demo(
+//              store: Store(initialState: EffectsCancellation.State()) { EffectsCancellation() }
+//            ) { store in
+//              EffectsCancellationView(store: store)
+//            }
+//          }
+
         }
 
       }

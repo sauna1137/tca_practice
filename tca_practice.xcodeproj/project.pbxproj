@@ -24,6 +24,7 @@
 		8A9127732CCD25CD00BAC001 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A9127722CCD25CD00BAC001 /* Preview Assets.xcassets */; };
 		8A91277B2CCD26DB00BAC001 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 8A91277A2CCD26DB00BAC001 /* ComposableArchitecture */; };
 		8A9B37172D1245FF0012CBEA /* SharedStateNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B37162D1245EA0012CBEA /* SharedStateNotification.swift */; };
+		8ABBF9CD2D485C0000676E3B /* Cancellation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABBF9CC2D485C0000676E3B /* Cancellation.swift */; };
 		8AC3DFC82D373C2800C35B21 /* Basics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC3DFC72D373C2800C35B21 /* Basics.swift */; };
 		8AF5AC5C2CF613E400977EF9 /* AlertAndConfirmationDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF5AC5B2CF613DA00977EF9 /* AlertAndConfirmationDialog.swift */; };
 		8AF5AC5E2CF693E000977EF9 /* FocusState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF5AC5D2CF693E000977EF9 /* FocusState.swift */; };
@@ -49,6 +50,7 @@
 		8A9127722CCD25CD00BAC001 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8A9B37162D1245EA0012CBEA /* SharedStateNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedStateNotification.swift; sourceTree = "<group>"; };
 		8AA8E45E2D41C85200A47C23 /* tca-practice-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "tca-practice-Info.plist"; sourceTree = SOURCE_ROOT; };
+		8ABBF9CC2D485C0000676E3B /* Cancellation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cancellation.swift; sourceTree = "<group>"; };
 		8AC3DFC72D373C2800C35B21 /* Basics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basics.swift; sourceTree = "<group>"; };
 		8AF5AC5B2CF613DA00977EF9 /* AlertAndConfirmationDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAndConfirmationDialog.swift; sourceTree = "<group>"; };
 		8AF5AC5D2CF693E000977EF9 /* FocusState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusState.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				8AC3DFC72D373C2800C35B21 /* Basics.swift */,
+				8ABBF9CC2D485C0000676E3B /* Cancellation.swift */,
 			);
 			path = Section3;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				8A6A77722CDCEF5F00281FF9 /* TwoCounters.swift in Sources */,
 				8A8AB7EE2D21253C0015F8AE /* SharedStateFileStorage.swift in Sources */,
 				8A4298C82CF3FF1800760FE6 /* Multiple-Destination.swift in Sources */,
+				8ABBF9CD2D485C0000676E3B /* Cancellation.swift in Sources */,
 				8A4298C62CEE454800760FE6 /* OptionalState.swift in Sources */,
 				8A5C41F42CE17D3A0055EBB5 /* Bindings-Basic.swift in Sources */,
 				8A8AB7EC2D211F780015F8AE /* FactClient.swift in Sources */,
