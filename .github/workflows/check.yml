@@ -1,0 +1,31 @@
+name: Feature Flag Check
+
+on:
+  pull_request:
+    paths:
+      - 'RootView.swift'  # FeatureFlag.swift に変更があった場合に実行
+
+jobs:
+  add_label:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Check for ABHotFlags changes in FeatureFlag.swift
+        id: check_diff
+        run: |
+          # FeatureFlag.swiftの差分を抽出し、「ABHotFlags」というキーワードがあるかチェックする
+          if git diff --unified=0 ${{ github.event.pull_request.base.sha }} ${{ github.event.pull_request.head.sha }} -- RootView.swift | grep -q "RootView"; then
+            echo "FLAG_CHANGED=true" >> $GITHUB_ENV
+          else
+            echo "FLAG_CHANGED=false" >> $GITHUB_ENV
+          fi
+
+      - name: Add Feature Release label
+        if: env.FLAG_CHANGED == 'true'
+        uses: actions-ecosystem/action-add-labels@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: "bug"
