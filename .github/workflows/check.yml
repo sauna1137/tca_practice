@@ -13,6 +13,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 200
           
       - name: Check for RootView changes
         id: check_changes
@@ -20,13 +22,19 @@ jobs:
           # ベースブランチを取得
           git fetch origin ${{ github.base_ref }}
           
-          # RootView.swiftファイルの変更をチェック
-          if git diff --name-only origin/${{ github.base_ref }}..HEAD | grep -q "RootView.swift"; then
-            echo "FLAG_CHANGED=true" >> $GITHUB_ENV
-            echo "::set-output name=changed::true"
-          else
+          # ベースコミットからDemoブロックを抽出
+          git show ${{ github.event.pull_request.base.sha }}:RootView.swift | sed -n '/struct Demo</,/\}$/p' > base_demo.txt
+          
+          # HEADコミットからDemoブロックを抽出
+          git show HEAD:RootView.swift | sed -n '/struct Demo</,/\}$/p' > head_demo.txt
+          
+          # 結果を比較する
+          if diff base_demo.txt head_demo.txt > /dev/null; then
             echo "FLAG_CHANGED=false" >> $GITHUB_ENV
             echo "::set-output name=changed::false"
+          else
+            echo "FLAG_CHANGED=true" >> $GITHUB_ENV
+            echo "::set-output name=changed::true"
           fi
           
       - name: Add bug label
