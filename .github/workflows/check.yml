@@ -23,10 +23,10 @@ jobs:
           git fetch origin ${{ github.base_ref }}
           
           # ベースコミットからDemoブロックを抽出
-          git show ${{ github.event.pull_request.base.sha }}:RootView.swift | sed -n '/struct Demo</,/\}$/p' > base_demo.txt
-          
+　　　　　　git show ${{ github.event.pull_request.base.sha }}:RootView.swift 2>/dev/null | sed -n '/struct Demo</,/\}$/p' > base_demo.txt || echo "" > base_demo.txt
+      
           # HEADコミットからDemoブロックを抽出
-          git show HEAD:RootView.swift | sed -n '/struct Demo</,/\}$/p' > head_demo.txt
+          git show HEAD:RootView.swift 2>/dev/null | sed -n '/struct Demo</,/\}$/p' > head_demo.txt || echo "" > head_demo.txt
           
           # 結果を比較する
           if diff base_demo.txt head_demo.txt > /dev/null; then
