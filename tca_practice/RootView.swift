@@ -123,6 +123,23 @@ struct RootView: View {
               EffectsBasicsView(store: store)
             }
           }
+
+//          NavigationLink("Cancellation") {
+//            Demo(
+//              store: Store(initialState: EffectsCancellation.State()) { EffectsCancellation() }
+//            ) { store in
+//              EffectsCancellationView(store: store)
+//            }
+//          }
+
+        }
+
+        Section {
+          NavigationLink("Pokemon List") {
+            Demo(store: Store(initialState: PokemonList.State()) { PokemonList() }) { store in
+              PokemonListView(store: store)
+            }
+          }
         }
 
       }
@@ -133,7 +150,7 @@ struct RootView: View {
 struct Demo<State, Action, Content: View>: View {
   @SwiftUI.State var store: Store<State, Action>
   let content: (Store<State, Action>) -> Content
-
+  let test = 0
   init(
     store: Store<State, Action>,
     @ViewBuilder content: @escaping (Store<State, Action>) -> Content
