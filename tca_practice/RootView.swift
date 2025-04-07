@@ -134,6 +134,14 @@ struct RootView: View {
 
         }
 
+        Section {
+          NavigationLink("Pokemon List") {
+            Demo(store: Store(initialState: PokemonList.State()) { PokemonList() }) { store in
+              PokemonListView(store: store)
+            }
+          }
+        }
+
       }
     }
   }
