@@ -89,6 +89,20 @@ struct RefreshableView: View {
       .frame(maxWidth: .infinity)
       .buttonStyle(.borderless)
 
+      if let fact = store.fact {
+        Text(fact)
+          .bold()
+      }
+      if self.isLoading {
+        Button("Cancel") {
+          store.send(.cancelButtonTapped)
+        }
+      }
+    }
+    .refreshable {
+      isLoading = true
+      defer { isLoading = false }
+      await store.send(.refresh).finish()
     }
   }
 }
